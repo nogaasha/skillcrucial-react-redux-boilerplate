@@ -10,6 +10,7 @@ const Dashboard = () => {
     <div>
       <Head title="Hello" />
       1. This is First page
+      <div>Enter Your repositories name:</div>
       <div>
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
