@@ -2,14 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
-  // const [props, setUsername] = useState('')
-  // const { props } = useState()
-  // useEffect(() => {
-  //   if (typeof props.username !== 'undefined') {
-  //     setUsername(props.username)
-  //   }
-  //  }, [props.username])
-  // const { username, repository } = useParams()
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -37,7 +29,16 @@ const Header = (props) => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             type="button"
           >
-            <Link to="/home/dashboard/">Home</Link>
+            <Link to="/home/">Home</Link>
+          </button>
+        </div>
+
+        <div>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            type="button"
+          >
+            <Link to="/home/dashboard/">First Page</Link>
           </button>
         </div>
       </div>

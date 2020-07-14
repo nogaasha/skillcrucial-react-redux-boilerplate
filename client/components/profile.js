@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 import axios from 'axios'
 import Head from './head'
@@ -26,10 +26,9 @@ const Profile = () => {
     <div>
       <Head title="Hello" />
       3. This is Readme file of {params.reponame}
+      <div>Link:</div>
       <div>{repo.download_url}</div>
-      <div>
-        <Link to="/">Go to root</Link>
-      </div>
+      <div>Text:</div>
       <div id="description" className="bg-grey-500 font-sans text-lg text-white-800 text-center">
         {readme}
       </div>
