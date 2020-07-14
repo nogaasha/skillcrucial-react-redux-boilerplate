@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
-  // const [toggled, setToggle] = useState(false) // хук usestate:  toggled-переменная состояния, toggle-функция, которая изменяет toggled
+  // const [props, setUsername] = useState('')
   // const { props } = useState()
   // useEffect(() => {
-  //  if (typeof props.username !== 'undefined') {
-  //    setToggle(!toggled)
-  //  }
-  // }, [props.username])
+  //   if (typeof props.username !== 'undefined') {
+  //     setUsername(props.username)
+  //   }
+  //  }, [props.username])
   // const { username, repository } = useParams()
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
@@ -22,7 +22,7 @@ const Header = (props) => {
         >
           <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
         </svg>
-
+        <div>{props.username}</div>
         <div>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -38,15 +38,6 @@ const Header = (props) => {
             type="button"
           >
             <Link to="/home/dashboard/">Home</Link>
-          </button>
-        </div>
-
-        <div>
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            type="button"
-          >
-            <Link to={`/home/repository/${props.username}`}>My Github</Link>
           </button>
         </div>
       </div>
