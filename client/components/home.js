@@ -22,7 +22,7 @@ const Home = () => {
               <Route exact path="/home/profile/:username/:reponame" component={() => <Profile />} />
             </Switch>
             <div>
-              <Link to="/"> Go To Home </Link>
+              <Link to="/home/dashboard/"> Go To Home </Link>
             </div>
             <div>
               <Link to="/"> Go To Root </Link>
