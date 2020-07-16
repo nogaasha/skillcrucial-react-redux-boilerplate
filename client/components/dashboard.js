@@ -22,13 +22,12 @@ const Dashboard = () => {
             setUsername(e.target.value)
           }}
         />
-        <button
+        <div
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           id="search-button"
-          type="button"
         >
           <Link to={`/${username}`}>Go To List Repositories</Link>
-        </button>
+        </div>
       </div>
     </div>
   )

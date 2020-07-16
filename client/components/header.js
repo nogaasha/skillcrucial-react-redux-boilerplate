@@ -17,24 +17,18 @@ const Header = () => {
         </svg>
         <div id="repository-name">{username}</div>
         {typeof reponame !== 'undefined' && (
-          <div>
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              type="button"
-              id="go-repository-list"
-            >
-              <Link to={`/${username}`}>Go Back</Link>
-            </button>
+          <div
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            id="go-repository-list"
+          >
+            <Link to={`/${username}`}>Go Back</Link>
           </div>
         )}
-        <div>
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            type="button"
-            id="go-back"
-          >
-            <Link to="/">First Page</Link>
-          </button>
+        <div
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          id="go-back"
+        >
+          <Link to="/">First Page</Link>
         </div>
       </div>
     </nav>
