@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 import axios from 'axios'
+import ReactMarkdown from 'react-markdown'
+import Header from './header'
 import Head from './head'
 
 const Profile = () => {
@@ -24,13 +26,14 @@ const Profile = () => {
   }, [repo])
   return (
     <div>
+      <Header />
       <Head title="Hello" />
       3. This is Readme file of {params.reponame}
       <div>Link:</div>
       <div>{repo.download_url}</div>
       <div>Text:</div>
-      <div id="description" className="bg-grey-500 font-sans text-lg text-white-800 text-center">
-        {readme}
+      <div id="description">
+        <ReactMarkdown>{readme}</ReactMarkdown>
       </div>
     </div>
   )
