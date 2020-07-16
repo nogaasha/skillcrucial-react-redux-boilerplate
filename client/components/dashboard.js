@@ -26,7 +26,7 @@ const Dashboard = () => {
           id="search-button"
           type="button"
         >
-          <Link to={`/home/repositories/${username}`}>Go To List Repositories</Link>
+          <Link to={`/${username}`}>Go To List Repositories</Link>
         </button>
       </div>
     </div>

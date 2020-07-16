@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 const Header = () => {
-  const { username } = useParams()
+  const { username, reponame } = useParams()
   return (
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -16,14 +16,14 @@ const Header = () => {
           <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
         </svg>
         <div id="repository-name">{username}</div>
-        {typeof username !== 'undefined' && (
+        {typeof reponame !== 'undefined' && (
           <div>
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               type="button"
               id="go-back"
             >
-              <Link to={`/home/repositories/${username}`}>Go Back</Link>
+              <Link to={`/${username}`}>Go Back</Link>
             </button>
           </div>
         )}
@@ -32,15 +32,7 @@ const Header = () => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             type="button"
           >
-            <Link to="/home/">Home</Link>
-          </button>
-        </div>
-        <div>
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            type="button"
-          >
-            <Link to="/home/dashboard/">First Page</Link>
+            <Link to="/dashboard/">First Page</Link>
           </button>
         </div>
       </div>

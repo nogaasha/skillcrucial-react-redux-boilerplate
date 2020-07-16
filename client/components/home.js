@@ -3,7 +3,6 @@ import { Link, Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Head from './head'
-import Header from './header'
 import Repositories from './list-repositories'
 import Profile from './profile'
 import Dashboard from './dashboard'
@@ -13,22 +12,18 @@ const Home = () => {
     <div>
       <Head title="Hello" />
       <div>
-        <Header params />
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-start justify-center h-screen">
           <div className="bg-indigo-800  text-white font-bold rounded-lg border shadow-lg p-10">
             <Switch>
-              <Route exact path="/home/dashboard/" component={() => <Dashboard />} />
-              <Route exact path="/home/repositories/:username" component={() => <Repositories />} />
-              <Route exact path="/home/profile/:username/:reponame" component={() => <Profile />} />
+              <Route exact path="/dashboard/" component={() => <Dashboard />} />
+              <Route exact path="/:username" component={() => <Repositories />} />
+              <Route exact path="/:username/:reponame" component={() => <Profile />} />
             </Switch>
             <div>
-              <Link to="/home/dashboard/"> Go To First Page </Link>
+              <Link to="/dashboard/"> Go To First Page </Link>
             </div>
             <div>
-              <Link to="/home/"> Go To Home </Link>
-            </div>
-            <div>
-              <Link to="/"> Go To Root </Link>
+              <Link to="/"> Go To Home </Link>
             </div>
           </div>
         </div>

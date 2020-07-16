@@ -26,8 +26,8 @@ const Profile = () => {
   }, [repo])
   return (
     <div>
-      <Header />
       <Head title="Hello" />
+      <Header reponame />
       3. This is Readme file of {params.reponame}
       <div>Link:</div>
       <div>{repo.download_url}</div>

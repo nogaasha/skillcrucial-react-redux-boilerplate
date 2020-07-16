@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import axios from 'axios'
+import Header from './header'
 import Head from './head'
 
 const Repositories = () => {
@@ -17,11 +18,12 @@ const Repositories = () => {
   return (
     <div>
       <Head title="Hello" />
+      <Header username />
       <div id="repository-name">2.This is ListRepositories of {username}</div>
       <div>
         {repos.map((item, index) => (
           <div className="no-underline hover:underline text-blue-500 text-lg">
-            <Link to={`/home/profile/${username}/${item.name}`}>
+            <Link to={`/${username}/${item.name}`}>
               {index}.{item.name}
             </Link>
           </div>
