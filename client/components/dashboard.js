@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { connect, useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { updateUsername } from '../redux/reducers/repositories'
 import Head from './head'
 
 const Dashboard = () => {
-  const [username, setUsername] = useState('')
+  const dispatch = useDispatch()
+  const username = useSelector((store) => store.repositories.username)
+  // const [username, setUsername] = useState('')
   return (
     <div>
       <Head title="Hello" />
@@ -19,7 +22,7 @@ const Dashboard = () => {
           placeholder="Username"
           value={username}
           onChange={(e) => {
-            setUsername(e.target.value)
+            dispatch(updateUsername(e.target.value))
           }}
         />
         <div
